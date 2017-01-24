@@ -6,7 +6,8 @@ var User = require('../models/User');
 router.get('/', function(req, res, next) {
     User.find({}, function(err, docs){
         res.render('index', {
-            "users" : docs
+            'users' : docs,
+            'title' : 'Mongoose Tutorial'
         })
     });
 });
