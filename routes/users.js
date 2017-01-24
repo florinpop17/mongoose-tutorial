@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     User.find({}, function(err, docs){
         res.render('index', {
             'users' : docs,
-            'title' : 'Mongoose Tutorial'
+            'title' : 'Registered users:'
         })
     });
 });
