@@ -1,5 +1,10 @@
 extends layout
 
 block content
+    div.container
     h1= title
-    p Welcome to #{title}
+    ul.userlist
+        each user, i in users
+            li
+                a(href="mailto:#{user.email}")= user.username
+                span - #{user.email}
