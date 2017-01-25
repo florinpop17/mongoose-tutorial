@@ -1,8 +1,12 @@
-nav.navbar.navbar-fixed-top
+nav.navbar.navbar-static-top
     .container
         .navbar-header
             a(href="/", class="navbar-brand") Mongoose Tutorial
-        .navbar-collapse.collapse
+            button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+        #navbar.navbar-collapse.collapse
             ul.nav.navbar-nav.navbar-right
                 li
                     a(href="/") Home
