@@ -18,4 +18,8 @@ router.get('/', function(req, res) {
     });
 })
 
+router.get('/addNewUser', function(req, res){
+    res.render('addNewUser');
+});
+
 module.exports = router;
