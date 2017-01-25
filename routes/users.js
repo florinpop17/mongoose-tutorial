@@ -7,13 +7,15 @@ router.get('/showUsers', function(req, res, next) {
     User.find({}, function(err, docs){
         res.render('showUsers', {
             'users' : docs,
-            'title' : 'Registered users:'
+            'sub-title' : 'Registered users:'
         })
     });
 });
 
 router.get('/', function(req, res) {
-    res.render('index');
+    res.render('index', {
+        title: 'Mongoose tutorial'
+    });
 })
 
 module.exports = router;
