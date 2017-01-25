@@ -5,11 +5,14 @@ block content
         .row
             .col-md-6.col-md-offset-3
                 h1 Add New User
-                form(action="/addUser")
+                form(action="/addNewUser")
                     .form-group
                         label(for="name") Name
                         input(class="form-control", name="name", type="text", placeholder="Name")
                     .form-group
                         label(for="email") Email
                         input(class="form-control", name="email", type="email", placeholder="Email")
+                    .form-group
+                        label(for="password") Password
+                        input(class="form-control", name="password", type="password", placeholder="Password")
                     button(type="submit", class="btn btn-primary btn-block") Add User

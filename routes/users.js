@@ -25,4 +25,12 @@ router.get('/addNewUser', function(req, res){
     });
 });
 
+router.post('/addNewUser', function(req, res){
+    var newUser = new User();
+    
+    newUser.name = req.body.name;
+    newUser.email = req.body.email;
+    newUser.password = req.body.password;
+});
+
 module.exports = router;
