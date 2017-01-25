@@ -13,3 +13,13 @@ a {
 .navbar {
     background-color: #eee;
 }
+
+.userlist {
+    list-style-type: none;
+    padding:0;
+}
+
+.userlist li {
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+}

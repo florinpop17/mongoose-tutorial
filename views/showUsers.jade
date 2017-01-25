@@ -2,9 +2,11 @@ extends layout
 
 block content
     div.container
-    h1= sub-title
-    ul.userlist
-        each user, i in users
-            li
-                a(href="mailto:#{user.email}")= user.username
-                span - #{user.email}
+        .row
+            .col-md-4.col-md-offset-4
+                h1= sub_title
+                ul.userlist
+                    each user, i in users
+                        li
+                            a(href="mailto:#{user.email}")= user.username
+                            span  - #{user.email}

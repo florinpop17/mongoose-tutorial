@@ -7,7 +7,7 @@ router.get('/showUsers', function(req, res, next) {
     User.find({}, function(err, docs){
         res.render('showUsers', {
             'users' : docs,
-            'sub-title' : 'Registered users:'
+            'sub_title' : 'Registered users:'
         })
     });
 });
