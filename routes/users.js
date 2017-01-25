@@ -13,7 +13,7 @@ router.get('/showUsers', function(req, res, next) {
 });
 
 router.get('/', function(req, res) {
-    res.render('index';
+    res.render('index');
 })
 
 router.get('/addNewUser', function(req, res){
@@ -29,9 +29,11 @@ router.post('/addNewUser', function(req, res){
     
     newUser.save(function(err, user){
         if(err){
+            console.log('Error:', err);
             res.send('Error: '+err);
         } else {
-            res.render('addNewUser');
+            console.log('Added succesfully');
+            res.render('/addNewUser');
         }
     })
 });
