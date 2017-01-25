@@ -7,22 +7,17 @@ router.get('/showUsers', function(req, res, next) {
     User.find({}, function(err, docs){
         res.render('showUsers', {
             'users' : docs,
-            'sub_title' : 'Registered users:',
-            'title' : 'Mongoose tutorial'
-        })
+            'sub_title' : 'Registered users:'
+        });
     });
 });
 
 router.get('/', function(req, res) {
-    res.render('index', {
-        title: 'Mongoose tutorial'
-    });
+    res.render('index';
 })
 
 router.get('/addNewUser', function(req, res){
-    res.render('addNewUser', {
-        title: 'Mongoose tutorial'
-    });
+    res.render('addNewUser');
 });
 
 router.post('/addNewUser', function(req, res){
