@@ -31,6 +31,14 @@ router.post('/addNewUser', function(req, res){
     newUser.name = req.body.name;
     newUser.email = req.body.email;
     newUser.password = req.body.password;
+    
+    newUser.save(function(err, user){
+        if(err){
+            res.send('Error: '+err);
+        } else {
+            res.render('addNewUser');
+        }
+    })
 });
 
 module.exports = router;
