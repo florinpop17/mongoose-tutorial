@@ -35,7 +35,7 @@ router.post('/addNewUser', function(req, res){
         } else {
             console.log('Added succesfully');
             console.log(user);
-            res.render('showUsers');
+            res.render('index');
         }
     })
 });
