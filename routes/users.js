@@ -24,7 +24,7 @@ router.get('/addNewUser', function(req, res){
 router.post('/addNewUser', function(req, res){
     var newUser = new User();
     console.log('...posting...');
-    newUser.name = req.body.name;
+    newUser.username = req.body.username;
     newUser.email = req.body.email;
     newUser.password = req.body.password;
     
@@ -35,7 +35,7 @@ router.post('/addNewUser', function(req, res){
         } else {
             console.log('Added succesfully');
             console.log(user);
-            res.render('index');
+            res.render('showUsers');
         }
     })
 });
